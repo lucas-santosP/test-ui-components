@@ -1,3 +1,3 @@
-import * as Icons from "lucide-react"
+import * as Icons from "lucide-react";
 
-export { Icons }
+export { Icons };

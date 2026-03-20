@@ -20,9 +20,8 @@
   --color-neutral-900: #333333;
   --color-neutral-950: #000000;
 
-  --color-orange-50: #fdcab4;
-  --color-orange-100: #fe9467;
-  --color-orange-200: #fe824e;
+  --color-orange-100: #fdcab4;
+  --color-orange-200: #fe9467;
   --color-orange-300: #fe824e;
   --color-orange-400: #fd7035;
   --color-orange-500: #fc4c02;
@@ -30,7 +29,7 @@
   --color-orange-700: #ca3d02;
   --color-orange-800: #b13501;
   --color-orange-900: #982e01;
-  --color-orange-950: #7e2601;
+  --color-orange-1000: #7e2601;
 
   --radius-sm: calc(0.625rem * 0.6);
   --radius-md: calc(0.625rem * 0.8);

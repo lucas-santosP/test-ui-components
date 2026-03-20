@@ -63,6 +63,7 @@ Each component lives in its own folder under `src/components/<name>/`:
 - `index.tsx` — React component, imports Base UI primitives, imports from `./styles` and `./types`
   - Exports only the top-level component and its props type. Never exports sub-components or primitive wrappers.
   - No inline classes. All classNames come from `styles.ts` via `styles.slotName({ class: className })`.
+  - Should always prefer Function over arrow functions except in callback definition.
 - `styles.ts` — All style definitions using `tv()` from tailwind-variants.
   - Use slots to target multiple internal elements.
   - Exports `componentStyles` and `ComponentStylesProps` (`VariantProps<typeof componentStyles>`).
@@ -74,7 +75,7 @@ Each component lives in its own folder under `src/components/<name>/`:
 - `stories.tsx` — Storybook stories.
   - Use component props to describe behavior. No new logic or styles.
 
-Stories are co-located with components and excluded from the library build via the `tsconfig.app.json` `exclude` glob (`src/**/*.stories.tsx`).
+Stories are co-located with components and excluded from the library build via `tsconfig.app.json` (`src/**/stories.tsx`) and the `unplugin-dts` exclude list in `vite.config.ts`.
 
 All components are re-exported from `src/components/index.ts` → `src/index.ts`.
 
