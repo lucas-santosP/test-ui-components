@@ -11,7 +11,15 @@ import { playwright } from "@vitest/browser-playwright";
 const dirname = typeof __dirname !== "undefined" ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), dts({ tsconfigPath: "./tsconfig.app.json" })],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({
+      tsconfigPath: "./tsconfig.app.json",
+      bundleTypes: true,
+      exclude: ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/**/*.spec.tsx"],
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -27,6 +35,13 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "react/jsx-runtime": "jsxRuntime",
+        },
+      },
     },
   },
   test: {

@@ -1,14 +1,9 @@
-import * as React from "react";
 import { Input as InputPrimitive } from "@base-ui/react/input";
 
 import { cn } from "tailwind-variants";
-import { inputStyles, type InputStylesProps } from "./input.styles";
+import { inputStyles } from "./styles";
 import { Icons } from "@/libs/icons";
-
-export interface InputProps extends React.ComponentProps<"input">, InputStylesProps {
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
-}
+import type { InputProps } from "./types";
 
 function Input(props: InputProps) {
   const { className, type = "text", leftIcon, rightIcon, ...restProps } = props;
@@ -41,3 +36,4 @@ function Input(props: InputProps) {
 }
 
 export { Input };
+export type { InputProps };

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Input } from "@/components/input";
+import { Input } from ".";
 import { Icons } from "@/libs/icons";
 
 const meta = {

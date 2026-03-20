@@ -1,0 +1,5 @@
+import { tv } from "tailwind-variants";
+
+export const separatorStyles = tv({
+  base: "shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch",
+});
