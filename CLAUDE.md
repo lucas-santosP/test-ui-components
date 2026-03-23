@@ -11,7 +11,6 @@ Always use `bun` (not npm or yarn).
 ```bash
 # Development
 bun run dev          # Start Storybook dev server (port 6006)
-bun run dev:app      # Start Vite dev app
 
 # Build
 bun run build        # TypeScript check + Vite library build
