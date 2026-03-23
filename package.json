@@ -31,6 +31,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.1",
     "@eslint/js": "^9.39.1",
+    "@microsoft/api-extractor": "^7.57.7",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^12.0.6",
